@@ -543,6 +543,54 @@ ul {
     background-color: #03A9F4
 }
 /* End Features */
+/* Start Testimonials  */
+.testimonials {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+.testimonials .main-title:hover {
+    border-color: var(--section-background);
+}
+.testimonials .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap:40px;
+}
+.testimonials .box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.07% );
+    position: relative;
+}
+.testimonials .box img {
+    position: absolute;
+    max-width: 100%;
+    border-radius: 50%;
+    right: -10px;
+    top: -50px;
+    border: 10px solid var(--section-background);
+    width: 100px;
+}
+.testimonials .box h3{
+    margin: 0 0 13px;
+}
+.testimonials .box .title {
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+}
+.testimonials .box .rate .filled {
+    color: #ffc107;
+}
+.testimonials .box p {
+    line-height: 1.5;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/* End Testimonials  */
 /* Start Animation  */
 @keyframes up-and-down {
     0%,
