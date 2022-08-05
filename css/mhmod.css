@@ -59,6 +59,7 @@ ul {
     position: relative;
     z-index: 1;
     transition: var(--main-transition);
+    text-transform: uppercase;
 }
 .main-title::before ,
 .main-title::after {
@@ -680,6 +681,131 @@ ul {
     margin-bottom: 25px;
 }
 /* End Team  */
+/* Start Services  */
+.services {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);  
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    gap: 40px;
+}
+.services .box {
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13% ), 0 2px 4px 0 rgb(0 0 0 / 12% );
+    counter-increment: services;
+    transition: var(--main-transition);
+    position: relative;
+}
+.services .box::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    top: -3px;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+}
+.services .box:hover::after {
+    width: 100%;
+}
+.services .box:hover {
+    transform: translateY(-10px);
+}
+.services .box i {
+    margin: 30px auto 20px;
+    color: #d5d5d5;
+    text-align: center;
+    display: block;
+}
+.services .box h3 {
+    color: var(--main-color);
+    margin: 20px 0 40px;
+    font-size: 25px;
+    text-align: center;
+}
+.services .box .info {
+    padding: 15px;
+    position: relative;
+    background-color: #f9f9f9;
+    text-align: right;
+}
+.services .box .info::before {
+    content: "0" counter(services);
+    position: absolute;
+    background-color: var(--main-color);
+    color: white;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+.services .box .info::after {
+    content: "";
+    position: absolute;
+    background-color: #d5d5d5;
+    top: 0;
+    left: 80px;
+    width: 50px;
+    height: calc(100% + 0.4px);
+    transform: skewX(-30deg);
+}
+.services .box .info a {
+    color: var(--main-color);
+}
+/* End Services  */
+/* Start Skills */
+.our-skills {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.our-skills .container {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .our-skills img {
+        display: none;
+    }
+}
+.our-skills .skills {
+   flex: 1;
+}
+.our-skills .skills .skill h3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.our-skills .skills .skill span {
+    font-size: 12px;
+    color: var(--main-color);
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+.our-skills .skills .skill .progress {
+    height: 30px;
+    background-color: #EEEEEE;
+    position: relative;
+}
+.our-skills .skills .skill .progress span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--main-color);
+}
+/* End Skills */
 /* Start Animation  */
 @keyframes up-and-down {
     0%,
