@@ -1162,6 +1162,65 @@ ul {
     border-color: var(--main-color-alt);
 }
 /* End Pricing Plans  */
+/*  Start Videos */
+.videos {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.videos .holder {
+    background-color: var(--section-background);
+    display: flex;
+    border: 1px solid #ddd;
+    justify-content: center;
+}
+@media (max-width: 991px) {
+    .videos .holder {
+        flex-direction: column;
+    }
+}
+.videos .holder .list {
+    background-color: white;
+    min-width: 300px;
+}
+.videos .holder .list .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: bold;
+    background-color: #F4F4F4;
+}
+.videos .holder .list ul li {
+    padding: 20px;
+    border-top: 1px solid var(--section-background);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.videos .holder .list ul li:hover {
+    color: var(--main-color);
+    background-color: #fafafa;
+}
+.videos .holder .list ul li span {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+}
+.videos .holder .preview {
+    background-color: #e2e2e2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.videos .holder .preview img {
+    max-width: 100%;
+}
+.videos .holder .preview .info {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+}
+/*  End Videos */
 /* Start Animation  */
 @keyframes up-and-down {
     0%,
