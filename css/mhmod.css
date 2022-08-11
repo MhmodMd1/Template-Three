@@ -1221,6 +1221,82 @@ ul {
     padding: 20px;
 }
 /*  End Videos */
+/* Start Stats */
+.stats {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-image: url(../imgs/stats.jpg);
+    background-size: cover;
+    position: relative;
+}
+.stats::before {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(255 255 255 / 95%);
+}
+.stats h2 {
+    position: relative;
+    margin: 0 auto 50px;
+    width: fit-content;
+    font-size: 40px;
+    font-weight: bold;
+}
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+    gap: 40px;
+    position: relative;
+}
+.stats .box {
+    background-color: white;
+    text-align: center;
+    padding: 30px 15px;
+    transition: var(--main-transition);
+    position: relative;
+    opacity: 0.8;
+}
+.stats .box:hover {
+    opacity: 1;
+}
+.stats .box::before ,
+.stats .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: var(--main-color);
+    transition: 1s;
+}
+.stats .box::before {
+    right: 0;
+    top: 0;
+}
+.stats .box::after {
+    bottom: 0;
+    left: 0;
+}
+.stats .box:hover::after ,
+.stats .box:hover::before{
+    height: 100%;
+}
+.stats .box .number {
+    font-size: 50px;
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.stats .box .text {
+    color: var(--main-color);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* End Stats */
 /* Start Animation  */
 @keyframes up-and-down {
     0%,
