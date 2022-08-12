@@ -1335,6 +1335,7 @@ ul {
     align-items: center;
     justify-content: center;
     flex-basis: 50%;
+    padding-bottom: 50px;
 }
 @media (max-width: 991px) {
     .discount .form {
@@ -1391,6 +1392,119 @@ ul {
     max-width: 100%;
 }
 /* End Discount  */
+/* Start Footer  */
+.footer {
+    padding: 70px 0 0;
+    background-color: #191919;
+}
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 40px;
+}
+.footer .box h3 {
+    font-size: 50px;
+    margin: 0 0 20px;
+    color: white;
+}
+.footer .box .social {
+    display: flex;
+}
+.footer .box .social li {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+.footer .box .social li a {
+    background-color: #313131;
+    color: #B9B9B9;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    transition: var(--main-transition);
+}
+.footer .box .social .facebook:hover {
+    background-color: #1877f2;
+}
+.footer .box .social .twitter:hover {
+    background-color: #1da1f2;
+}
+.footer .box .social .youtube:hover {
+    background-color: #ff0000;
+}
+.footer .box .text {
+    color: #B9B9B9;
+    line-height: 2;
+}
+.footer .box .links li {
+    padding: 15px 0;
+    transition: var(--main-transition);
+}
+.footer .box .links li:not(:last-child) {
+    border-bottom: 1px solid #444;
+}
+.footer .box .links li:hover {
+    padding-left: 10px;
+}
+.footer .box .links li a {
+    color: #B9B9B9;
+    transition: var(--main-transition);
+}
+.footer .box .links li:hover a {
+    color: white;
+}
+.footer .box .links li a::before {
+    content: "\F101";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+.footer .box .line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.footer .box .line i {
+    color: var(--main-color);
+    font-size: 25px;
+    margin-right: 10px;
+}
+.footer .box .line .info {
+    color: #B9B9B9;
+    line-height: 1.7;
+    flex: 1;
+}
+@media (max-width: 761px) {
+    .footer {
+        text-align: center;
+    }
+    .footer .box .social {
+        justify-content: center;
+    }
+    .footer .box .line {
+        flex-direction: column;
+    }
+    .footer .box .line i {
+        margin-bottom: 10px;
+    }
+}
+.footer .footer-gallery img {
+    width: 78px;
+    border: 3px solid white;
+    margin: 2px;
+}
+.footer .copyright {
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    margin: 50px 0 0;
+    border-top: 1px solid #444;
+}
+/* End Footer  */
 /* Start Animation  */
 @keyframes up-and-down {
     0%,
